@@ -45,7 +45,7 @@ router.register('objectmanagement', ObjectManagerDemoModelManagement,
 
 # Trash
 router.register('api_customer', CustomerViewSet, 'api-customer')
-
+from . import views
 
 urlpatterns = [
                   path('object_management', object_management,
@@ -152,4 +152,5 @@ urlpatterns = [
                   # Trash
                   path('trash/', trash_view, name="trash"),
                   path('api/customer/', include(router.urls)),
+                  path('prueba-tinymce/', views.prueba_tinymce, name='prueba_tinymce'),
               ] + pclss.get_urls() + countryclss.get_urls() + menuclss.get_urls()

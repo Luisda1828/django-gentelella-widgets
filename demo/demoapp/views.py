@@ -54,3 +54,6 @@ def bt_modal_display(request):
         'abcdeform': ABCDEModalGroupForm()
     }
     return render(request, 'btmodals.html', context=context)
+
+def prueba_tinymce(request):
+    return render(request, 'prueba_tinymce.html')

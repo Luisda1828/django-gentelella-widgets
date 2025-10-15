@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba TinyMCE 8</title>
+    	<script src="https://cdn.tiny.cloud/1/x9h7rddqwsijx8thhc0w116rshothgsr8bu9bhawb3u1t3kl/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+
+    <!-- <script src="{% static 'tinymce-8.1.2/tinymce.min.js' %}"></script> -->
+</head>
+<body>
+    <h1>Prueba TinyMCE 8</h1>
+    <textarea id="mytextarea" name="content">Hola, prueba de TinyMCE 8</textarea>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tinymce.init({
+                selector: '#mytextarea',
+                menubar: false,
+                uploadcare_public_key: '465ab6aaececdedd2acb',
+                plugins: ['autolink', 'lists', 'link', 'image', 'code'],
+                browser_spellcheck: true,
+                contextmenu: false
+            });
+        });
+    </script>
+</body>
+</html>
