@@ -251,13 +251,11 @@ document.gtwidgets = {
                 selector: '#' + $(elem).attr('id'),
                 menubar: true,
                 toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment',
-               plugins: ['autolink', 'codesample', 'link', 'lists', 'media', 'quickbars', "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen", "insertdatetime media table paste imagetools wordcount",
-                "autoresize", "hr", "image",
-            ],
+                plugins: ['autolink', 'codesample', 'link', 'lists', 'media', 'quickbars', "advlist autolink lists link image charmap print preview anchor","searchreplace visualblocks code fullscreen", "insertdatetime media table paste imagetools wordcount","autoresize", "hr", "image",
+                ],
                 browser_spellcheck: true,
                 license_key: 'gpl',
-                contextmenu: true,
+                contextmenu: false,
 
                 setup: function (editor) {
                     editor.on('keydown', function(e) {
